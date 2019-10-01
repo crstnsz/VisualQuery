@@ -1,0 +1,199 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F862A0D6-4142-4F45-A720-8F9DC8B6357B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualQuery</RootNamespace>
+    <AssemblyName>VisualQuery</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxIOwnerItem.cs" />
+    <Compile Include="ManutExpressao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManutExpressao.Designer.cs">
+      <DependentUpon>ManutExpressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResizeVisualWhereTableArgs.cs" />
+    <Compile Include="ResizeVisualWhereTableHandler.cs" />
+    <Compile Include="SintaxeChanged.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="ColumnOfTableClickedHandler.cs" />
+    <Compile Include="ColumnSelectionChanged.cs" />
+    <Compile Include="Join.cs" />
+    <Compile Include="JoinEventArgs.cs" />
+    <Compile Include="JoinEventHandler.cs" />
+    <Compile Include="Operations.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Query.cs" />
+    <Compile Include="QueryDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryDesigner.Designer.cs">
+      <DependentUpon>QueryDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTable.cs" />
+    <Compile Include="SQLSyntaxHighlightingTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLSyntaxHighlightingTextBox.Designer.cs">
+      <DependentUpon>SQLSyntaxHighlightingTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyntaxHighlightingTextBox\AutoCompleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyntaxHighlightingTextBox\HighlightDescriptor.cs" />
+    <Compile Include="SyntaxHighlightingTextBox\HighlightDescriptorCollection.cs" />
+    <Compile Include="SyntaxHighlightingTextBox\SeperaratorCollection.cs" />
+    <Compile Include="SyntaxHighlightingTextBox\SyntaxHighlightingTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyntaxHighlightingTextBox\Win32.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableListItem.cs" />
+    <Compile Include="VirtualDataBase.cs" />
+    <Compile Include="VisualJoin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualJoin.Designer.cs">
+      <DependentUpon>VisualJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualTable.Designer.cs">
+      <DependentUpon>VisualTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualTablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualTablePanel.Designer.cs">
+      <DependentUpon>VisualTablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualWherePanelcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualWherePanelcs.Designer.cs">
+      <DependentUpon>VisualWherePanelcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualWhereTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualWhereTable.Designer.cs">
+      <DependentUpon>VisualWhereTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Where.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ManutExpressao.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManutExpressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryDesigner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLSyntaxHighlightingTextBox.resx">
+      <DependentUpon>SQLSyntaxHighlightingTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxHighlightingTextBox\AutoCompleteForm.resx">
+      <DependentUpon>AutoCompleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxHighlightingTextBox\SyntaxHighlightingTextBox.resx">
+      <DependentUpon>SyntaxHighlightingTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualJoin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualTable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualTablePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualTablePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualWherePanelcs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualWherePanelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualWhereTable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisualWhereTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{D1149F8D-E4BC-47E5-B060-5637AC8FF0BF}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Error\Error.csproj">
+      <Project>{9959E7CC-02CC-4926-BD34-6B20E4608958}</Project>
+      <Name>Error</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Literal\Literal.csproj">
+      <Project>{9BE0D077-1051-45E7-AFE1-BCF7B9334D8D}</Project>
+      <Name>Literal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Where.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
